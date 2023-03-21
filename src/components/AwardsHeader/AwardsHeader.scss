@@ -1,0 +1,21 @@
+.vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+
+  @media (max-width: 640px) {
+    align-self: flex-start;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: white;
+    transform: translate(-10px, 40px);
+
+    @media (min-width: 768px) {
+      width: 64px;
+      transform: translate(-20px, 40px);
+    }
+  }
+}

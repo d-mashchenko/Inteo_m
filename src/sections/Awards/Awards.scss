@@ -1,0 +1,5 @@
+.award:nth-last-of-type(-n + 2) {
+  @media (min-width: 640px) {
+    margin-bottom: 0;
+  }
+}
