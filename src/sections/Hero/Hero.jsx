@@ -21,11 +21,13 @@ export const Hero = () => {
           size='xl'
           utilityClasses='max-w-[800px] mx-auto'
         />
-        <img
-          src={getInTouchBadge}
-          alt='badge'
-          className='absolute left-[50%] bottom-0 -translate-x-1/2 translate-y-1/2 lg:left-0 lg:translate-x-[93%]'
-        />
+        <a href='#'>
+          <img
+            src={getInTouchBadge}
+            alt='badge'
+            className='absolute left-[50%] bottom-0 -translate-x-1/2 translate-y-1/2 lg:left-0 lg:translate-x-[93%]'
+          />
+        </a>
       </div>
       <div className='h-[640px] '>
         <img src={room} alt='room' className='w-full h-full object-cover' />
