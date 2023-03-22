@@ -10,13 +10,7 @@ export const Title = ({ children, size, utilityClasses }) => {
     xl: 'text-5xl leading-[60px] sm:text-7xl sm:leading-[96px] sm:tracking-tight font-medium',
   };
 
-  return (
-    <div
-      className={`${sizes[size]} font-playfair text-neutral-900 ${utilityClasses}`}
-    >
-      {children}
-    </div>
-  );
+  return <div className={`${sizes[size]} ${utilityClasses}`}>{children}</div>;
 };
 
 Title.propTypes = {

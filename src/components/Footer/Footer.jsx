@@ -11,18 +11,22 @@ export const Footer = () => {
     {
       src: instagramIcon,
       alt: 'instagram-icon',
+      href: '#',
     },
     {
       src: facebookIcon,
       alt: 'facebook-icon',
+      href: '#',
     },
     {
       src: youtubeIcon,
       alt: 'youtube-icon',
+      href: '#',
     },
     {
       src: twitterIcon,
       alt: 'twitter-icon',
+      href: '#',
     },
   ];
 
@@ -89,10 +93,12 @@ export const Footer = () => {
             <div className='flex sm:ml-6'>
               {socialNetworks.map((item, index) => (
                 <div
-                  className='border border-primary-100 rounded-full p-[10px] mr-6 last:mr-0'
+                  className='border border-primary-100 rounded-full  mr-6 last:mr-0'
                   key={index}
                 >
-                  <img src={item.src} alt={item.alt} />
+                  <a href={item.href}>
+                    <img src={item.src} alt={item.alt} className='p-[10px]' />
+                  </a>
                 </div>
               ))}
             </div>

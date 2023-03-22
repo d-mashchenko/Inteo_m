@@ -4,12 +4,12 @@ import { Home } from './pages/Home';
 
 export function App() {
   return (
-    <div className='wrapper'>
+    <>
       <Header />
-      <div className='main'>
+      <main>
         <Home />
-      </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

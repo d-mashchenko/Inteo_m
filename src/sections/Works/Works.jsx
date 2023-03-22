@@ -68,7 +68,7 @@ export const Works = () => {
           </div>
           <Button
             size='big'
-            children='contact us'
+            text='contact us'
             utilityClasses='hidden lg:flex'
           />
         </div>
@@ -93,7 +93,7 @@ export const Works = () => {
             </div>
           ))}
         </div>
-        <Button size='big' children='contact us' utilityClasses='lg:hidden' />
+        <Button size='big' text='contact us' utilityClasses='lg:hidden' />
       </div>
     </section>
   );

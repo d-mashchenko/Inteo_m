@@ -9,13 +9,7 @@ export const BaseText = ({ content, size, utilityClasses }) => {
     xl: 'text-lg leading-8 sm:text-xl sm:leading-8',
   };
 
-  return (
-    <p
-      className={`${sizes[size]} font-outfit font-light text-neutral-700 ${utilityClasses}`}
-    >
-      {content}
-    </p>
-  );
+  return <p className={`${sizes[size]} ${utilityClasses}`}>{content}</p>;
 };
 
 BaseText.propTypes = {

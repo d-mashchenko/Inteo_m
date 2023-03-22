@@ -30,7 +30,7 @@ export const Metric = () => {
                 size='lg'
                 utilityClasses='sm:mb-2 xl:mb-0'
               />
-              <p className='font-outfit text-sm text-neutral-900 uppercase tracking-wider max-w-[168px]'>
+              <p className='text-sm text-neutral-900 uppercase tracking-wider max-w-[168px]'>
                 {item.description}
               </p>
             </div>

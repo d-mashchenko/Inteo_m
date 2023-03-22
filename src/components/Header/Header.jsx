@@ -18,9 +18,9 @@ const links = [
 
 export const Header = () => {
   return (
-    <header className='Header'>
+    <header>
       <div className='container flex justify-between items-center'>
-        <a className='' href='#'>
+        <a href='#'>
           <img src={logo} alt='logo' />
         </a>
         <div className='flex py-5'>
@@ -35,7 +35,7 @@ export const Header = () => {
               </a>
             ))}
           </nav>
-          <Button size='normal' children='contact us' />
+          <Button size='normal' text='contact us' />
         </div>
       </div>
     </header>

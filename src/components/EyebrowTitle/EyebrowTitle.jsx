@@ -13,7 +13,7 @@ export const EyebrowTitle = ({ content, browPlace, color, utilityClasses }) => {
 
   return (
     <h4
-      className={`${browPlaces[browPlace]} ${colors[color]} flex items-center text-sm font-semibold uppercase tracking-widest mb-6 ${utilityClasses}`}
+      className={`${browPlaces[browPlace]} ${colors[color]} font-outfit flex items-center text-sm font-semibold uppercase tracking-widest mb-6 ${utilityClasses}`}
     >
       {content}
     </h4>
