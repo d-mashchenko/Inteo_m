@@ -1,0 +1,21 @@
+.Hero {
+  &__badge {
+    @apply absolute left-[50%] bottom-0 -translate-x-1/2 translate-y-1/2;
+
+    @screen lg {
+      @apply left-0 translate-x-[93%];
+    }
+  }
+
+  &__awards-list {
+    @apply flex flex-col gap-y-6;
+
+    @screen sm {
+      @apply flex-auto flex-row flex-wrap gap-y-8;
+    }
+
+    @screen xl {
+      @apply flex-nowrap justify-between;
+    }
+  }
+}

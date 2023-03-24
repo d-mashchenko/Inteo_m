@@ -37,7 +37,7 @@ const works = [
 export const Works = () => {
   return (
     <section className='py-12 sm:py-24 xl:py-28'>
-      <div className='container lg:flex lg:gap-[88px]'>
+      <div className='container flex flex-col gap-10 sm:gap-20 lg:flex-row lg:gap-[88px]'>
         <div className='xl:max-w-[592px]'>
           <EyebrowTitle
             content='recent works'
@@ -53,7 +53,7 @@ export const Works = () => {
             size='md'
             utilityClasses='mb-12 xl:mb-24 xl:max-w-[600px]'
           />
-          <div className='mb-10 sm:mb-20 xl:mb-24'>
+          <div>
             <img
               src={latestWork.image.src}
               alt={latestWork.image.alt}
@@ -72,28 +72,30 @@ export const Works = () => {
             utilityClasses='hidden lg:flex'
           />
         </div>
-        <div className='mb-12 xl:mb-0'>
-          {works.map((item, index) => (
-            <div key={index} className='mb-10 last:mb-0 sm:mb-20'>
-              <img
-                src={item.image.src}
-                alt={item.image.alt}
-                className='mb-4 w-full xl:max-w-[480px]'
-              />
-              <Title
-                children={<h3>{item.title}</h3>}
-                size='xs'
-                utilityClasses='mb-4'
-              />
-              <BaseText
-                content={item.text}
-                size='sm'
-                utilityClasses='xl:max-w-[480px]'
-              />
-            </div>
-          ))}
+        <div>
+          <div className='mb-12 flex flex-col gap-10 sm:gap-20 xl:mb-0'>
+            {works.map((item, index) => (
+              <div key={index}>
+                <img
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  className='mb-4 w-full xl:max-w-[480px]'
+                />
+                <Title
+                  children={<h3>{item.title}</h3>}
+                  size='xs'
+                  utilityClasses='mb-4'
+                />
+                <BaseText
+                  content={item.text}
+                  size='sm'
+                  utilityClasses='xl:max-w-[480px]'
+                />
+              </div>
+            ))}
+          </div>
+          <Button size='big' text='contact us' utilityClasses='lg:hidden' />
         </div>
-        <Button size='big' text='contact us' utilityClasses='lg:hidden' />
       </div>
     </section>
   );

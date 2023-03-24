@@ -5,11 +5,26 @@ import kitchenSmall from '../../assets/img/kitchen_small.png';
 import bedroomSmall from '../../assets/img/bedroom_small.png';
 import badgeStar from '../../assets/img/badge_star.svg';
 
+const metrics = [
+  {
+    value: '100%',
+    description: 'satisfitation clients',
+  },
+  {
+    value: '250',
+    description: 'employees on worldwide',
+  },
+  {
+    value: '3469',
+    description: 'projects completed on 60 countries',
+  },
+];
+
 export const About = () => {
   return (
-    <section className='py-12 md:py-24 xl:py-32'>
-      <div className='container xl:flex xl:items-center xl:gap-10'>
-        <div className='mb-20 sm:mb-28 xl:mb-0 xl:max-w-[592px]'>
+    <section className='pt-12 pb-12 md:pt-24 xl:pt-32'>
+      <div className='container flex flex-col gap-20 pb-12 sm:gap-28 md:pb-24 xl:flex-row xl:items-center xl:gap-10 xl:pb-32'>
+        <div className='xl:max-w-[592px]'>
           <EyebrowTitle content='about us' browPlace='before' color='primary' />
           <Title
             children={
@@ -46,6 +61,26 @@ export const About = () => {
             className='absolute left-[42%] top-0 -translate-y-1/2'
           />
         </div>
+      </div>
+      <div className='container'>
+        <div className='pb-12 sm:flex sm:justify-between xl:pb-20'>
+          {metrics.map((item, index) => (
+            <div
+              className='mb-8 flex items-center gap-4 last:mb-0 min-[480px]:justify-center sm:mb-0 sm:block xl:flex'
+              key={index}
+            >
+              <Title
+                children={<h2>{item.value}</h2>}
+                size='lg'
+                utilityClasses='sm:mb-2 xl:mb-0'
+              />
+              <p className='max-w-[168px] text-sm uppercase tracking-wider text-neutral-900'>
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <hr className='text-neutral-300'></hr>
       </div>
     </section>
   );

@@ -51,11 +51,11 @@ export const Services = () => {
           size='md'
           utilityClasses='mb-10 sm:mb-20 xl:max-w-[800px]'
         />
-        <div className='xl:flex xl:gap-8'>
+        <div className='flex flex-col gap-8 xl:flex-row'>
           {services.map((item, index) => (
             <div
               key={index}
-              className='p-8 sm:p-10 mb-8 last:mb-0 xl:mb-0 border border-primary-100'
+              className='border border-primary-100 p-8 last:mb-0 sm:p-10'
             >
               <img
                 src={item.image.src}
