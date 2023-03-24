@@ -19,22 +19,23 @@ const links = [
 export const Header = () => {
   return (
     <header>
-      <div className='container flex justify-between items-center'>
+      <div className='container flex items-center justify-between'>
         <a href='#'>
           <img src={logo} alt='logo' />
         </a>
         <div className='flex py-5'>
-          <nav className='hidden gap-4 items-center mr-4 sm:flex'>
+          <ul className='mr-4 hidden items-center gap-4 sm:flex'>
             {links.map((item, index) => (
-              <a
-                className='px-4 font-medium text-sm leading-6 text-neutral-700'
-                href={item.href}
-                key={index}
-              >
-                {item.name}
-              </a>
+              <li key={index}>
+                <a
+                  className='px-4 text-sm font-medium leading-6 text-neutral-700'
+                  href={item.href}
+                >
+                  {item.name}
+                </a>
+              </li>
             ))}
-          </nav>
+          </ul>
           <Button size='normal' text='contact us' />
         </div>
       </div>

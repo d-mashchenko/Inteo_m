@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <section className='py-12 md:py-24 xl:py-32'>
       <div className='container xl:flex xl:items-center xl:gap-10'>
-        <div className='mb-20 sm:mb-28 xl:max-w-[592px] xl:mb-0'>
+        <div className='mb-20 sm:mb-28 xl:mb-0 xl:max-w-[592px]'>
           <EyebrowTitle content='about us' browPlace='before' color='primary' />
           <Title
             children={
@@ -21,12 +21,15 @@ export const About = () => {
             utilityClasses='mb-6'
           />
           <BaseText
-            content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.'
+            content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. 
+            Erat id laoreet posuere etiam morbi.'
             size='md'
             utilityClasses='mb-6'
           />
           <BaseText
-            content='Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. Faucibus sit odio bibendum lobortis diam.'
+            content='Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. 
+            Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. 
+            Faucibus sit odio bibendum lobortis diam.'
             size='md'
           />
         </div>

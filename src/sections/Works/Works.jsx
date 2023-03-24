@@ -6,35 +6,35 @@ import { Title } from '../../components/Title/Title';
 import { BaseText } from '../../components/BaseText/BaseText';
 import { Button } from '../../components/Button/Button';
 
-export const Works = () => {
-  const latestWork = {
+const latestWork = {
+  image: {
+    src: longTable,
+    alt: 'long-table',
+  },
+  title: 'Villa Furnishing & Interior',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.',
+};
+
+const works = [
+  {
     image: {
-      src: longTable,
-      alt: 'long-table',
+      src: shortTable,
+      alt: 'short-table',
     },
-    title: 'Villa Furnishing & Interior',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.',
-  };
+    title: 'Luxury Hotel Renovation',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.',
+  },
+  {
+    image: {
+      src: pool,
+      alt: 'swimming-pool',
+    },
+    title: 'Residence Swimming Pool',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.',
+  },
+];
 
-  const works = [
-    {
-      image: {
-        src: shortTable,
-        alt: 'short-table',
-      },
-      title: 'Luxury Hotel Renovation',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.',
-    },
-    {
-      image: {
-        src: pool,
-        alt: 'swimming-pool',
-      },
-      title: 'Residence Swimming Pool',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.',
-    },
-  ];
-
+export const Works = () => {
   return (
     <section className='py-12 sm:py-24 xl:py-28'>
       <div className='container lg:flex lg:gap-[88px]'>
@@ -74,7 +74,7 @@ export const Works = () => {
         </div>
         <div className='mb-12 xl:mb-0'>
           {works.map((item, index) => (
-            <div key={index} className='mb-10 sm:mb-20 last:mb-0'>
+            <div key={index} className='mb-10 last:mb-0 sm:mb-20'>
               <img
                 src={item.image.src}
                 alt={item.image.alt}
