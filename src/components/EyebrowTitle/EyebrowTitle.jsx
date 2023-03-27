@@ -1,19 +1,23 @@
 import PropTypes from 'prop-types';
 
+import './EyeBrowTitle.scss';
+
 const browPlaces = {
-  before: 'before:w-16 before:h-[1px] before:inline-block before:mr-4',
-  after: 'after:w-16 after:h-[1px] after:inline-block after:ml-4',
+  before: 'EyeBrowTitle--before',
+  after: 'EyeBrowTitle--after',
 };
 
 const colors = {
-  primary: 'text-primary-600 before:bg-primary-600 after:bg-primary-600',
-  neutral: 'text-neutral-700 before:bg-neutral-700 after:bg-neutral-700',
+  primary: 'EyeBrowTitle--primary',
+  neutral: 'EyeBrowTitle--neutral',
 };
 
 export const EyebrowTitle = ({ content, browPlace, color, utilityClasses }) => {
   return (
     <h4
-      className={`${browPlaces[browPlace]} ${colors[color]} mb-6 flex items-center font-outfit text-sm font-semibold uppercase tracking-widest ${utilityClasses}`}
+      className={`EyeBrowTitle ${browPlaces[browPlace]} ${colors[color]} ${
+        utilityClasses ? utilityClasses : ''
+      }`}
     >
       {content}
     </h4>

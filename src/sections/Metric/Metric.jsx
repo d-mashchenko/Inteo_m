@@ -1,3 +1,4 @@
+import { Devider } from '../../components/Devider/Devider';
 import { Title } from '../../components/Title/Title';
 
 const metrics = [
@@ -36,8 +37,8 @@ export const Metric = () => {
             </div>
           ))}
         </div>
-        <hr className='text-neutral-300'></hr>
       </div>
+      <Devider />
     </section>
   );
 };

@@ -5,6 +5,9 @@ import pool from '../../assets/img/work_pool.png';
 import { Title } from '../../components/Title/Title';
 import { BaseText } from '../../components/BaseText/BaseText';
 import { Button } from '../../components/Button/Button';
+import { useIsBreakpoint } from '../../hooks/useIsBreakPoint';
+
+import './Works.scss';
 
 const latestWork = {
   image: {
@@ -35,14 +38,17 @@ const works = [
 ];
 
 export const Works = () => {
+  const isTablet = useIsBreakpoint(1024);
+
   return (
-    <section className='py-12 sm:py-24 xl:py-28'>
-      <div className='container flex flex-col gap-10 sm:gap-20 lg:flex-row lg:gap-[88px]'>
+    <section className='Works py-12 sm:py-24 xl:py-28'>
+      <div className='Works__container container'>
         <div className='xl:max-w-[592px]'>
           <EyebrowTitle
             content='recent works'
             browPlace='before'
             color='primary'
+            utilityClasses='mb-6'
           />
           <Title
             children={
@@ -53,7 +59,7 @@ export const Works = () => {
             size='md'
             utilityClasses='mb-12 xl:mb-24 xl:max-w-[600px]'
           />
-          <div>
+          <div className='lg:mb-24'>
             <img
               src={latestWork.image.src}
               alt={latestWork.image.alt}
@@ -66,14 +72,12 @@ export const Works = () => {
             />
             <BaseText content={latestWork.text} size='sm' />
           </div>
-          <Button
-            size='big'
-            text='contact us'
-            utilityClasses='hidden lg:flex'
-          />
+          {!isTablet && (
+            <Button size='big' text='contact us' utilityClasses='flex' />
+          )}
         </div>
         <div>
-          <div className='mb-12 flex flex-col gap-10 sm:gap-20 xl:mb-0'>
+          <div className='Works__item-list'>
             {works.map((item, index) => (
               <div key={index}>
                 <img
@@ -94,7 +98,7 @@ export const Works = () => {
               </div>
             ))}
           </div>
-          <Button size='big' text='contact us' utilityClasses='lg:hidden' />
+          {isTablet && <Button size='big' text='contact us' />}
         </div>
       </div>
     </section>

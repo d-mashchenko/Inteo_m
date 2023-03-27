@@ -1,6 +1,5 @@
 import { EyebrowTitle } from '../../components/EyebrowTitle/EyebrowTitle';
 import { Title } from '../../components/Title/Title';
-
 import house from '../../assets/icons/house.svg';
 import some from '../../assets/icons/some.svg';
 import spatula from '../../assets/icons/spatula.svg';
@@ -35,12 +34,13 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className='py-12 sm:py-24 xl:py-28'>
+    <section className='Services pt-24 pb-12 sm:pt-36 sm:pb-24 xl:pt-40 xl:pb-28'>
       <div className='container'>
         <EyebrowTitle
           content='our services'
           browPlace='before'
           color='primary'
+          utilityClasses='mb-6'
         />
         <Title
           children={
@@ -53,10 +53,7 @@ export const Services = () => {
         />
         <div className='flex flex-col gap-8 xl:flex-row'>
           {services.map((item, index) => (
-            <div
-              key={index}
-              className='border border-primary-100 p-8 last:mb-0 sm:p-10'
-            >
+            <div key={index} className='border border-primary-100 p-8 sm:p-10'>
               <img
                 src={item.image.src}
                 alt={item.image.alt}

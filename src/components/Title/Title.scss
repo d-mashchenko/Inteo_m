@@ -1,0 +1,49 @@
+.Title {
+  &--xs {
+    @apply text-2xl leading-8;
+
+    @screen sm {
+      @apply text-4xl leading-[48px];
+    }
+  }
+
+  &--sm {
+    @apply text-3xl leading-10;
+
+    @screen sm {
+      @apply text-4xl leading-[48px];
+    }
+  }
+
+  &--smFooter {
+    @apply text-3xl leading-10;
+
+    @screen sm {
+      @apply text-5xl leading-[60px];
+    }
+  }
+
+  &--md {
+    @apply text-4xl leading-[48px];
+
+    @screen sm {
+      @apply text-6xl leading-[72px] tracking-tight;
+    }
+  }
+
+  &--lg {
+    @apply text-5xl leading-[60px];
+
+    @screen sm {
+      @apply text-6xl leading-[72px] tracking-tight;
+    }
+  }
+
+  &--xl {
+    @apply text-5xl font-medium leading-[60px];
+
+    @screen sm {
+      @apply text-7xl leading-[96px] tracking-tight;
+    }
+  }
+}

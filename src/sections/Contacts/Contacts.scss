@@ -1,0 +1,26 @@
+.Contacts {
+  &__container {
+    @apply flex flex-col gap-12;
+
+    @screen lg {
+      @apply flex-row justify-between;
+    }
+  }
+
+  &__main-link {
+    @apply font-playfair text-3xl italic leading-[40px]
+    text-primary-600 underline decoration-1 underline-offset-2;
+
+    @screen sm {
+      @apply text-5xl leading-[60px] underline-offset-[6px];
+    }
+  }
+
+  &__city {
+    @apply mb-2 font-playfair text-2xl leading-8 text-neutral-900;
+  }
+
+  &__email {
+    @apply inline-block font-playfair text-2xl text-primary-600;
+  }
+}

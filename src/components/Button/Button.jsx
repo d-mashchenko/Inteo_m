@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
 import arrow from '../../assets/icons/arrow.svg';
 
+import './Button.scss';
+
 const sizes = {
-  normal: 'text-xs px-5 py-3',
-  big: 'text-sm px-6 py-4',
+  normal: 'Button',
+  big: 'Button Button--big',
 };
 
 export const Button = ({ text, size, utilityClasses }) => {
   return (
     <button
-      className={`${sizes[size]} flex items-center bg-primary-600 font-semibold uppercase text-white ${utilityClasses}`}
+      className={`${sizes[size]} ${utilityClasses ? utilityClasses : ''}`}
     >
       {text}
-      <img className='ml-1' src={arrow} alt='arrow' />
+      <img src={arrow} alt='arrow' />
     </button>
   );
 };

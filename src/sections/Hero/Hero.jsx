@@ -7,6 +7,7 @@ import awardGermanDesign from '../../assets/icons/01_award.svg';
 import awardADesign from '../../assets/icons/02_award.svg';
 import awardIfDesign from '../../assets/icons/03_award.svg';
 import awardGoodDesign from '../../assets/icons/04_award.svg';
+import roomMobile from '../../assets/img/roomMobile.png';
 
 import './Hero.scss';
 
@@ -47,7 +48,7 @@ const awards = [
 
 export const Hero = () => {
   return (
-    <section className='pt-20'>
+    <section className='Hero pt-20'>
       <div className='container relative pb-20 text-center'>
         <Title
           children={
@@ -69,7 +70,11 @@ export const Hero = () => {
         </a>
       </div>
       <div className='h-[640px] '>
-        <img src={room} alt='room' className='h-full w-full object-cover' />
+        <picture>
+          <source media='(max-width: 480px)' srcSet={roomMobile} />
+          <source media='(min-width: 481px)' srcSet={room} />
+          <img src={room} alt='room' className='h-full w-full object-cover' />
+        </picture>
       </div>
       <div className='bg-neutral-800 pt-6 pb-6 '>
         <div className='container flex justify-center sm:items-center'>
