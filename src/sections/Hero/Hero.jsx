@@ -76,7 +76,7 @@ export const Hero = () => {
           <img src={room} alt='room' className='h-full w-full object-cover' />
         </picture>
       </div>
-      <div className='bg-neutral-800 pt-6 pb-6 '>
+      <div className='bg-neutral-800 py-6'>
         <div className='container flex justify-center sm:items-center'>
           <VerticalListTitle text='Awards' />
           <ul className='Hero__awards-list'>

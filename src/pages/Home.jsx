@@ -2,7 +2,7 @@ import { Hero } from '../sections/Hero/Hero';
 import { About } from '../sections/About/About';
 import { Services } from '../sections/Services/Services';
 import { Works } from '../sections/Works/Works';
-import { Devider } from '../components/Devider/Devider';
+import { Divider } from '../components/Divider/Divider';
 import { Contacts } from '../sections/Contacts/Contacts';
 
 export const Home = () => {
@@ -10,12 +10,12 @@ export const Home = () => {
     <>
       <Hero />
       <About />
-      <Devider />
+      <Divider />
       <Services />
       <Works />
-      <Devider />
+      <Divider />
       <Contacts />
-      <Devider />
+      <Divider />
     </>
   );
 };

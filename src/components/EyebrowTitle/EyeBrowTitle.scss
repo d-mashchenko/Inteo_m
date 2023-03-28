@@ -2,28 +2,20 @@
   @apply flex items-center font-outfit text-sm 
   font-semibold uppercase tracking-widest;
 
-  &--before {
-    &:before {
-      content: '';
-      @apply mr-4 inline-block h-[1px] w-16;
-    }
+  &--before:before {
+    content: '';
+    @apply mr-4 inline-block h-[1px] w-16;
   }
 
-  &--after {
-    &:after {
-      content: '';
-      @apply ml-4 inline-block h-[1px] w-16;
-    }
+  &--after:after {
+    content: '';
+    @apply ml-4 inline-block h-[1px] w-16;
   }
 
   &--primary {
     @apply text-primary-600;
 
-    &:before {
-      content: '';
-      @apply bg-primary-600;
-    }
-
+    &:before,
     &:after {
       content: '';
       @apply bg-primary-600;
@@ -33,11 +25,7 @@
   &--neutral {
     @apply text-neutral-700;
 
-    &:before {
-      content: '';
-      @apply bg-neutral-700;
-    }
-
+    &:before,
     &:after {
       content: '';
       @apply bg-neutral-700;
