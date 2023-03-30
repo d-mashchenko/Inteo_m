@@ -32,7 +32,7 @@ export const Header = () => {
               {links.map((item, index) => (
                 <li key={index}>
                   <a
-                    className='px-4 text-sm font-medium leading-6 text-neutral-700'
+                    className='px-4 text-sm font-medium leading-6 text-neutral-700 hover:underline'
                     href={item.href}
                   >
                     {item.name}

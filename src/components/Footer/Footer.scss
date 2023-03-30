@@ -10,4 +10,10 @@
   &__copyright-note {
     @apply font-outfit text-base font-light text-neutral-700;
   }
+
+  &__social-item {
+    &:hover svg {
+      @apply fill-primary-300 transition;
+    }
+  }
 }

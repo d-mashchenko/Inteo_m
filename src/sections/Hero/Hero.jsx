@@ -2,49 +2,39 @@ import { BaseText } from '../../components/BaseText/BaseText';
 import { Title } from '../../components/Title/Title';
 import { VerticalListTitle } from '../../components/VerticalListTitle/VerticaListTitle';
 import room from '../../assets/img/room.png';
-import getInTouchBadge from '../../assets/img/getintouch.png';
-import awardGermanDesign from '../../assets/icons/01_award.svg';
-import awardADesign from '../../assets/icons/02_award.svg';
-import awardIfDesign from '../../assets/icons/03_award.svg';
-import awardGoodDesign from '../../assets/icons/04_award.svg';
 import roomMobile from '../../assets/img/roomMobile.png';
+import getInTouchBadge from '../../assets/img/getintouch.png';
+import { ReactComponent as AwardGermanDesign } from '../../assets/icons/01_award.svg';
+import { ReactComponent as AwardADesign } from '../../assets/icons/02_award.svg';
+import { ReactComponent as AwardIfDesign } from '../../assets/icons/03_award.svg';
+import { ReactComponent as AwardGoodDesign } from '../../assets/icons/04_award.svg';
 
 import './Hero.scss';
 
 const awards = [
   {
-    image: {
-      src: awardGermanDesign,
-      alt: 'german-award',
-    },
+    icon: AwardGermanDesign,
     title: `German Design Award`,
     year: `2021`,
   },
   {
-    image: {
-      src: awardADesign,
-      alt: 'gold-award',
-    },
+    icon: AwardADesign,
     title: `Gold A’ Design Award`,
     year: `2021`,
   },
   {
-    image: {
-      src: awardIfDesign,
-      alt: 'IF-award',
-    },
+    icon: AwardIfDesign,
     title: `IF Design Award`,
     year: `2020`,
   },
   {
-    image: {
-      src: awardGoodDesign,
-      alt: 'good-design-award',
-    },
+    icon: AwardGoodDesign,
     title: `Good Design Award`,
     year: `2019`,
   },
 ];
+
+const color = '#C4A386';
 
 export const Hero = () => {
   return (
@@ -85,7 +75,7 @@ export const Hero = () => {
                 key={index}
                 className='flex items-center gap-3 sm:w-1/2 xl:w-auto'
               >
-                <img src={item.image.src} alt={item.image.alt} />
+                <item.icon className=' fill-primary-300' />
                 <p className='text-sm leading-6 text-neutral-300'>
                   {item.title} <br></br> {item.year}
                 </p>

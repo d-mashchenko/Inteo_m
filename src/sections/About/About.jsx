@@ -3,7 +3,7 @@ import { EyebrowTitle } from '../../components/EyebrowTitle/EyebrowTitle';
 import { Title } from '../../components/Title/Title';
 import kitchenSmall from '../../assets/img/kitchen_small.png';
 import bedroomSmall from '../../assets/img/bedroom_small.png';
-import badgeStar from '../../assets/img/badge_star.svg';
+import { ReactComponent as BadgeStar } from '../../assets/img/badge_star.svg';
 
 import './About.scss';
 
@@ -27,12 +27,11 @@ export const About = () => {
     <section className='About'>
       <div className='container'>
         <div className='About__main-content'>
-          <div className='xl:max-w-[592px]'>
+          <div className='flex flex-col gap-6 xl:max-w-[592px]'>
             <EyebrowTitle
               content='about us'
               browPlace='before'
               color='primary'
-              utilityClasses='mb-6'
             />
             <Title
               children={
@@ -41,13 +40,11 @@ export const About = () => {
                 </h2>
               }
               size='md'
-              utilityClasses='mb-6'
             />
             <BaseText
               content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. 
             Erat id laoreet posuere etiam morbi.'
               size='md'
-              utilityClasses='mb-6'
             />
             <BaseText
               content='Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. 
@@ -63,11 +60,7 @@ export const About = () => {
             <div className='pt-[22%] xl:pt-[30%]'>
               <img className='w-full' src={bedroomSmall} alt='bedroom' />
             </div>
-            <img
-              src={badgeStar}
-              alt='badge'
-              className='absolute left-[42%] top-0 -translate-y-1/2'
-            />
+            <BadgeStar className='absolute left-[42%] top-0 -translate-y-1/2 fill-primary-600' />
           </div>
         </div>
         <div className='About__metric-list'>

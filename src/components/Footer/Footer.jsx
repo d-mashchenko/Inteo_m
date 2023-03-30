@@ -1,30 +1,26 @@
-import instagramIcon from '../../assets/icons/instagram.svg';
-import facebookIcon from '../../assets/icons/facebook.svg';
-import youtubeIcon from '../../assets/icons/youtube.svg';
-import twitterIcon from '../../assets/icons/twitter.svg';
 import { EyebrowTitle } from '../EyebrowTitle/EyebrowTitle';
+import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg';
+import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg';
+import { ReactComponent as YoutubeIcon } from '../../assets/icons/youtube.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
 
 import './Footer.scss';
 
 const socialNetworks = [
   {
-    src: instagramIcon,
-    alt: 'instagram-icon',
+    icon: InstagramIcon,
     href: '#',
   },
   {
-    src: facebookIcon,
-    alt: 'facebook-icon',
+    icon: FacebookIcon,
     href: '#',
   },
   {
-    src: youtubeIcon,
-    alt: 'youtube-icon',
+    icon: YoutubeIcon,
     href: '#',
   },
   {
-    src: twitterIcon,
-    alt: 'twitter-icon',
+    icon: TwitterIcon,
     href: '#',
   },
 ];
@@ -41,14 +37,11 @@ export const Footer = () => {
           <EyebrowTitle content='connect' browPlace='after' color='neutral' />
           <div className='flex gap-6'>
             {socialNetworks.map((item, index) => (
-              <div
-                className='rounded-full border border-primary-100'
-                key={index}
-              >
-                <a href={item.href}>
-                  <img src={item.src} alt={item.alt} className='p-[10px]' />
-                </a>
-              </div>
+              <a href={item.href} key={index} className=' Footer__social-item'>
+                <div className='rounded-full border border-primary-100'>
+                  <item.icon className='m-[10px] fill-primary-600' />
+                </div>
+              </a>
             ))}
           </div>
         </div>

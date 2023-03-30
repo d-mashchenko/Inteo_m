@@ -1,32 +1,23 @@
 import { EyebrowTitle } from '../../components/EyebrowTitle/EyebrowTitle';
 import { Title } from '../../components/Title/Title';
-import house from '../../assets/icons/house.svg';
-import some from '../../assets/icons/some.svg';
-import spatula from '../../assets/icons/spatula.svg';
 import { BaseText } from '../../components/BaseText/BaseText';
+import { ReactComponent as House } from '../../assets/icons/house.svg';
+import { ReactComponent as Some } from '../../assets/icons/some.svg';
+import { ReactComponent as Spatula } from '../../assets/icons/spatula.svg';
 
 const services = [
   {
-    image: {
-      src: house,
-      alt: 'house',
-    },
+    icon: House,
     title: 'Architectural & Interior design',
     text: 'Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.',
   },
   {
-    image: {
-      src: some,
-      alt: 'some',
-    },
+    icon: Some,
     title: 'Building Renovation',
     text: 'Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.',
   },
   {
-    image: {
-      src: spatula,
-      alt: 'spatule',
-    },
+    icon: Spatula,
     title: 'Construciton Management',
     text: 'Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.',
   },
@@ -54,11 +45,7 @@ export const Services = () => {
         <div className='flex flex-col gap-8 xl:flex-row'>
           {services.map((item, index) => (
             <div key={index} className='border border-primary-100 p-8 sm:p-10'>
-              <img
-                src={item.image.src}
-                alt={item.image.alt}
-                className='mb-6 sm:mb-20'
-              />
+              <item.icon className='mb-6 fill-primary-600 sm:mb-20' />
               <Title
                 children={<h3>{item.title}</h3>}
                 size='sm'

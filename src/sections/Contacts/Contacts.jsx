@@ -38,7 +38,10 @@ export const Contacts = () => {
               size='xs'
               utilityClasses='mb-2'
             />
-            <a className='font-playfair text-2xl text-primary-600' href='#'>
+            <a
+              className='font-playfair text-2xl text-primary-600 hover:text-primary-300'
+              href='#'
+            >
               +8(663)125-08-59
             </a>
           </div>

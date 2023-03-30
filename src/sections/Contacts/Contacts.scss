@@ -9,7 +9,8 @@
 
   &__main-link {
     @apply font-playfair text-3xl italic leading-[40px]
-    text-primary-600 underline decoration-1 underline-offset-2;
+    text-primary-600 underline decoration-1 underline-offset-2
+    hover:text-primary-300;
 
     @screen sm {
       @apply text-5xl leading-[60px] underline-offset-[6px];
@@ -21,6 +22,7 @@
   }
 
   &__email {
-    @apply inline-block font-playfair text-2xl text-primary-600;
+    @apply inline-block font-playfair text-2xl text-primary-600
+    hover:text-primary-300;
   }
 }

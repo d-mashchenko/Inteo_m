@@ -27,6 +27,8 @@ module.exports = {
         white: '#ffffff',
         primary: {
           100: '#E6D8CC',
+          300: '#C4A386',
+          500: '#ae7637',
           600: '#996830',
         },
       },
