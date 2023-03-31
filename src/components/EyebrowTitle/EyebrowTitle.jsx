@@ -26,7 +26,7 @@ export const EyebrowTitle = ({ content, browPlace, color, utilityClasses }) => {
 
 EyebrowTitle.propTypes = {
   content: PropTypes.string.isRequired,
-  browPlace: PropTypes.oneOf(['before', 'after']).isRequired,
-  color: PropTypes.oneOf(['primary', 'neutral']).isRequired,
+  browPlace: PropTypes.oneOf(Object.keys(browPlaces)).isRequired,
+  color: PropTypes.oneOf(Object.keys(colors)).isRequired,
   utilityClasses: PropTypes.string,
 };

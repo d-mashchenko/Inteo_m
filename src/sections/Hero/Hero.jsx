@@ -34,8 +34,6 @@ const awards = [
   },
 ];
 
-const color = '#C4A386';
-
 export const Hero = () => {
   return (
     <section className='Hero pt-20'>

@@ -21,6 +21,6 @@ export const Button = ({ text, size, utilityClasses }) => {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['normal', 'big']).isRequired,
+  size: PropTypes.oneOf(Object.keys(sizes)).isRequired,
   utilityClasses: PropTypes.string,
 };

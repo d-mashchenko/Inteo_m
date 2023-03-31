@@ -21,6 +21,6 @@ export const Title = ({ children, size, utilityClasses }) => {
 
 Title.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['xs', 'sm', 'smFooter', 'md', 'lg', 'xl']).isRequired,
+  size: PropTypes.oneOf(Object.keys(sizes)).isRequired,
   utilityClasses: PropTypes.string,
 };

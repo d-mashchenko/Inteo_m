@@ -20,6 +20,6 @@ export const BaseText = ({ content, size, utilityClasses }) => {
 
 BaseText.propTypes = {
   content: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']).isRequired,
+  size: PropTypes.oneOf(Object.keys(sizes)).isRequired,
   utilityClasses: PropTypes.string,
 };
