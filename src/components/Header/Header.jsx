@@ -41,7 +41,7 @@ export const Header = () => {
               ))}
             </ul>
           )}
-          <Button size='normal' text='contact us' />
+          <Button text='contact us' />
         </div>
       </div>
     </header>

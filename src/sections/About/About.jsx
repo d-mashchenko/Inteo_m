@@ -28,11 +28,7 @@ export const About = () => {
       <div className='container'>
         <div className='About__main-content'>
           <div className='flex flex-col gap-6 xl:max-w-[592px]'>
-            <EyebrowTitle
-              content='about us'
-              browPlace='before'
-              color='primary'
-            />
+            <EyebrowTitle content='about us' />
             <Title
               children={
                 <h2>

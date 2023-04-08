@@ -27,12 +27,7 @@ export const Services = () => {
   return (
     <section className='Services pt-24 pb-12 sm:pt-36 sm:pb-24 xl:pt-40 xl:pb-28'>
       <div className='container'>
-        <EyebrowTitle
-          content='our services'
-          browPlace='before'
-          color='primary'
-          utilityClasses='mb-6'
-        />
+        <EyebrowTitle content='our services' utilityClasses='mb-6' />
         <Title
           children={
             <h2>
