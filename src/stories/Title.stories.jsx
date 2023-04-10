@@ -1,7 +1,5 @@
 import { Title } from '../components/Title/Title';
 
-// const sample = <h1>some</h1>;
-
 export default {
   component: Title,
   tags: ['autodocs'],
