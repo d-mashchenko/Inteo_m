@@ -1,0 +1,21 @@
+.VerticalListTitle {
+  writing-mode: vertical-lr;
+
+  @apply -rotate-180 self-start pl-11 font-playfair text-2xl italic 
+  text-white opacity-50;
+
+  @screen sm {
+    @apply self-auto pl-10;
+  }
+
+  &:before {
+    content: '';
+
+    @apply block h-[1px] w-6 -translate-x-[10px] translate-y-[40px]
+    bg-white;
+
+    @screen md {
+      @apply w-[64px] -translate-x-[20px] translate-y-[40px];
+    }
+  }
+}

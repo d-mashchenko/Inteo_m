@@ -1,0 +1,52 @@
+.About {
+  @apply pt-12 pb-12;
+
+  @screen sm {
+    @apply pt-24;
+  }
+
+  @screen xl {
+    @apply pb-20 pt-32;
+  }
+
+  &__main-content {
+    @apply flex flex-col gap-20 pb-12;
+
+    @screen sm {
+      @apply gap-28;
+    }
+
+    @screen md {
+      @apply pb-24;
+    }
+
+    @screen xl {
+      @apply flex-row items-center gap-10 pb-32;
+    }
+  }
+
+  &__metric-list {
+    @apply flex flex-col gap-8;
+
+    @screen sm {
+      @apply flex-row justify-between gap-0;
+    }
+  }
+
+  &__metric-item {
+    @apply flex items-center gap-4;
+
+    @screen sm {
+      @apply flex-col items-start gap-2;
+    }
+
+    @screen xl {
+      @apply flex-row items-center;
+    }
+  }
+
+  &__item-description {
+    @apply max-w-[168px] text-sm font-normal uppercase 
+    tracking-wider text-neutral-900;
+  }
+}
