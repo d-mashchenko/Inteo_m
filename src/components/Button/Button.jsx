@@ -8,7 +8,7 @@ const sizes = {
   big: 'Button Button--big',
 };
 
-export const Button = ({ text, size, utilityClasses }) => {
+export const Button = ({ text, size = 'normal', utilityClasses }) => {
   return (
     <button
       className={`${sizes[size]} ${utilityClasses ? utilityClasses : ''}`}
@@ -20,7 +20,16 @@ export const Button = ({ text, size, utilityClasses }) => {
 };
 
 Button.propTypes = {
+  /**
+   * Button contents
+   */
   text: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(Object.keys(sizes)).isRequired,
+  /**
+   * Button size
+   */
+  size: PropTypes.oneOf(Object.keys(sizes)),
+  /**
+   * Some additional classes like margin, padding e.g.
+   */
   utilityClasses: PropTypes.string,
 };

@@ -44,12 +44,7 @@ export const Works = () => {
     <section className='Works py-12 sm:py-24 xl:py-28'>
       <div className='Works__container container'>
         <div className='xl:max-w-[592px]'>
-          <EyebrowTitle
-            content='recent works'
-            browPlace='before'
-            color='primary'
-            utilityClasses='mb-6'
-          />
+          <EyebrowTitle content='recent works' utilityClasses='mb-6' />
           <Title
             children={
               <h2>

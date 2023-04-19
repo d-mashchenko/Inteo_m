@@ -20,7 +20,16 @@ export const Title = ({ children, size, utilityClasses }) => {
 };
 
 Title.propTypes = {
+  /**
+   * Node of your title
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * Text font size
+   */
   size: PropTypes.oneOf(Object.keys(sizes)).isRequired,
+  /**
+   * Some additional classes like margin, padding e.g.
+   */
   utilityClasses: PropTypes.string,
 };

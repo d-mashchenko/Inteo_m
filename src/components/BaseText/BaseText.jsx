@@ -19,7 +19,16 @@ export const BaseText = ({ content, size, utilityClasses }) => {
 };
 
 BaseText.propTypes = {
+  /**
+   * Component contents
+   */
   content: PropTypes.string.isRequired,
+  /**
+   * Text font size
+   */
   size: PropTypes.oneOf(Object.keys(sizes)).isRequired,
+  /**
+   * Some additional classes like margin, padding e.g.
+   */
   utilityClasses: PropTypes.string,
 };
